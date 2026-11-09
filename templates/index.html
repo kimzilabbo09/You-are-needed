@@ -1,15 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You Are Needed ❤️</title>
 
     <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
+    href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
@@ -20,50 +17,37 @@
     </header>
 
     <main>
+        <h2>YOU ARE ENOUGH!</h2>
 
-        <section class="picture-section">
-            <h2>YOU ARE ENOUGH!</h2>
+        <video class="main-picture" autoplay muted loop playsinline>
+            <source src="{{ url_for('static', filename='kimm.mp4') }}" type="video/mp4">
+        </video>
 
-            <img
-                src="{{ url_for('static', filename='kimm.jpg') }}"
-                alt="You are kind, strong, wonderful, and enough."
-                class="main-picture"
-            >
+        <p class="message">
+            You are kind. You are strong.
+            You are wonderful. You are important.
+            Most importantly, YOU ARE ENOUGH.
+        </p>
 
-            <p class="message">
-                You are kind. You are strong.
-                You are wonderful. You are important.
-                Most importantly, YOU ARE ENOUGH.
-            </p>
-        </section>
+        <h2>Share the Positivity!</h2>
 
-        <section class="qr-section">
-            <h2>Share the Positivity!</h2>
+        <p>Scan this QR code to visit our website.</p>
 
-            <p>
-                Scan this QR code to visit this website
-                and share this beautiful reminder.
-            </p>
+        <img src="{{ url_for('qr_code') }}"
+             class="qr-image"
+             alt="Website QR Code">
 
-            <img
-                src="{{ url_for('qr_code') }}"
-                alt="Website QR Code"
-                class="qr-image"
-            >
+        <br><br>
 
-            <br>
-
-            <a href="{{ url_for('qr_code') }}"
-               download="you_are_needed_QR.png"
-               class="download-button">
-                Download QR Code
-            </a>
-        </section>
-
+        <a href="{{ url_for('qr_code') }}"
+           download="website_qr.png"
+           class="download-button">
+            Download QR Code
+        </a>
     </main>
 
     <footer>
-        <p>Made with ❤️ as a reminder that you matter.</p>
+        Made with ❤️ as a reminder that you matter.
     </footer>
 
 </body>
