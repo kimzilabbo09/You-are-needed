@@ -9,7 +9,7 @@ app = Flask(__name__)
 # Set this to your deployed website URL
 PUBLIC_URL = os.environ.get(
     "PUBLIC_URL",
-    "https://you-are-needed.onrender.com"
+("https://you-are-needed.onrender.com"
 ).rstrip("/")
 
 
