@@ -6,11 +6,9 @@ from io import BytesIO
 
 app = Flask(__name__)
 
-# Set this to your deployed website URL
-PUBLIC_URL = os.environ.get(
-    "PUBLIC_URL",
-("https://you-are-needed.onrender.com"
-).rstrip("/")
+# Correct QR destination
+PUBLIC_URL = "https://you-are-needed.onrender.com"
+QR_URL = f"{PUBLIC_URL}/static/kimm.jpg"
 
 
 @app.route("/")
@@ -21,13 +19,13 @@ def home():
 @app.route("/qr.png")
 def qr_code():
     qr = qrcode.QRCode(
-        version=1,
+        version=None,
         error_correction=qrcode.constants.ERROR_CORRECT_H,
         box_size=12,
         border=4
     )
 
-    qr.add_data(PUBLIC_URL)
+    qr.add_data(QR_URL)
     qr.make(fit=True)
 
     image = qr.make_image(
