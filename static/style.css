@@ -1,0 +1,42 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffaf0;
+    color: #333;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    background-color: #f8df62;
+    padding: 30px;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+.main-picture {
+    width: 90%;
+    max-width: 650px;
+    border: 4px solid #f8df62;
+    border-radius: 15px;
+}
+
+.qr-image {
+    width: 200px;
+    height: 200px;
+}
+
+.download-button {
+    background-color: #e9c747;
+    color: black;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+footer {
+    background-color: #f8df62;
+    padding: 20px;
+}

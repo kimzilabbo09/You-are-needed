@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Are Needed ❤️</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>You Are Needed ❤️</h1>
+        <p>A little reminder of how wonderful you are.</p>
+    </header>
+
+    <main>
+        <h2>YOU ARE ENOUGH!</h2>
+
+        <img src="{{ url_for('static', filename='kimm.jpg') }}"
+             class="main-picture"
+             alt="You are enough">
+
+        <p class="message">
+            You are kind. You are strong.
+            You are wonderful. You are important.
+            Most importantly, YOU ARE ENOUGH.
+        </p>
+
+        <h2>Share the Positivity!</h2>
+
+        <p>Scan this QR code to visit our website.</p>
+
+        <img src="{{ url_for('qr_code') }}"
+             class="qr-image"
+             alt="Website QR Code">
+
+        <br><br>
+
+        <a href="{{ url_for('qr_code') }}"
+           download="website_qr.png"
+           class="download-button">
+            Download QR Code
+        </a>
+    </main>
+
+    <footer>
+        Made with ❤️ as a reminder that you matter.
+    </footer>
+
+</body>
+</html>
