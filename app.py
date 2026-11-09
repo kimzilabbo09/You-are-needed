@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # Correct QR destination
 PUBLIC_URL = "https://you-are-needed.onrender.com"
-QR_URL = f"{PUBLIC_URL}/static/kimm.jpg"
+QR_URL = f"{PUBLIC_URL}"
 
 
 @app.route("/")
