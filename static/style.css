@@ -35,7 +35,24 @@ h1 {
     text-decoration: none;
     border-radius: 20px;
 }
+.fb-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 20px;
+    background: #D9EEFF;
+    color: #24618A;
+    text-decoration: none;
+    border: 1px solid #A9D5F5;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
 
+.fb-button:hover {
+    background: #BDE1FA;
+    transform: scale(1.03);
+}
 footer {
     background-color: #f8df62;
     padding: 20px;
