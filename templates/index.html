@@ -32,20 +32,20 @@
         </p>
 
         <h2>Share the Positivity!</h2>
-  
-    <div class="facebook-qr">
-    <h2>FOLLOW US ON FACEBOOK</h2>
+        
+<p>Scan this QR code to visit our website.</p>
 
-    <img src="{{ url_for('static', filename='facebook_page_qr.jpg') }}"
-         alt="Facebook QR Code">
+        <img src="{{ url_for('qr_code') }}"
+             class="qr-image"
+             alt="Website QR Code">
 
-    <p>Scan the QR code or click the button below to visit our Facebook page.</p>
+        <br><br>
 
-    <a href="https://www.facebook.com/KimSejeongSesang"
-       target="_blank"
-       class="fb-button">
-        Click to Directly Visit Our FB Page
-    </a>
+        <a href="{{ url_for('qr_code') }}"
+           download="website_qr.png"
+           class="download-button">
+            Download QR Code
+        </a>
 </div> 
     </main>
 
